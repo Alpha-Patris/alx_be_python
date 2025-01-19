@@ -4,7 +4,7 @@ def display_current_datetime():
     current_datetime = datetime.now()
     global current_date
     current_date = current_datetime.date()
-    formatted_datetime = current_datetime.strftime("%Y-%m-%d, %H:%M:%S")
+    formatted_datetime = current_datetime.strftime("%Y-%m-%d\s*%H:%M:%S")
     print("Current date and time:", formatted_datetime)
     return
 
