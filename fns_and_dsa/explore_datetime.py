@@ -1,18 +1,15 @@
 from datetime import datetime, timedelta
 
+
 def display_current_datetime():
+    global current_datetime
     current_datetime = datetime.now()
-    formatted_datetime = current_datetime.strftime("%Y-%m-%d *%H:%M:%S")
-    global current_date
-    current_date = current_datetime.date()
-    print("Current date and time:", formatted_datetime)
-    return
-
-def calculate_future_date():
-    days_to_add = int(input("Enter the number of days to add to the current date: "))
-    future_date = current_date + timedelta(days=days_to_add)
-    print("Future date: ", future_date)
-
-
+    print(f"Current date and time: {current_datetime:%Y-%m-%d %H:%M:%S}") 
 display_current_datetime()
+
+number_of_days = int(input("Enter the number of days to add to the current date: "))
+def calculate_future_date():
+    current_date = current_datetime.date
+    future_date = current_date + timedelta(days=number_of_days)
+    print(f"future date: {future_date}")
 calculate_future_date()
